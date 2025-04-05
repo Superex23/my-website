@@ -8,12 +8,104 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        <nav>
+            <h1>Christopher Chaiban</h1>
+            <u1>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#volunteering">Voluntering</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </u1>
+            <button id="theme-toggle">🌓</button>
+        </nav>
     </header>
+
     <main>
-        <p>This is a simple personal website with dark/light mode support.</p>
+        <section id="about">
+            <h2>About me</h2>
+            <div class="about-container">
+                <img src="assets\images\ProfessionalPicture.jfif" alt="My Photo" class="profile-pic" />
+                <div>
+                    <p>I am an undergraduate at the University of Texas at Dallas (UTD). I major in Computer Science and am passionate about all things technology related. Aiming for a career related to IT and CyberSecurity</p>
+                    <a href="assets\documents\Resume 3.0.pdf" download class="resume-button">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <u1>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>Routing and Switching Protocols</li>
+                <li>Network Design Methodologies</li>
+                <li>Network Security</li>
+            </u1>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Mock Network Design Bid</h3>
+                <p>An academic group project that mimicked multiple IT companies deisgning and presenting a network to a buyer</p>
+                <!--<li>xyz</li>-->
+            </div>
+            <div class="project-card">
+                <h3>Dots-and-Boxes Game</h3>
+                <p>An academic group project that involved the creation of the game in computer assembly code</p>
+                <!--<li>xyz</li>-->
+            </div>
+            <div class="project-card">
+                <h3>Greenfoot Game</h3>
+                <p>An academic group project where we created a "Bullet Hell" game using Greenfoot</p>
+                <!--<li>xyz</li>-->
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+
+            <div class="cert-list">
+                <div class="cert-item">
+                    <span> Cisco Certified Network Associate, Cisco Systems</span>
+                    <a href="https://cp.certmetrics.com/cisco/en/public/verify/credential/4RLJ50R3SL4EQLKN" target="blank" class="cert-button">Verify</a>
+                </div>
+            </div>
+            
+            <div class="cert-preview">
+                <img src="assets\images\Cisco Certified Network Associate Certificate.png" alt="Certification" class="cert-thumbnail" onclick="openCertFull()" />
+            </div>
+            
+            <!-- Fullscreen Modal
+            <div id="cert-modal" class="cert-modal" onclick="closeCertFull()">
+                <img src="assets\images\Cisco Certified Network Associate Certificate.png" alt="Certification Full" class="cert-full" />
+            </div>
+        -->
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <p>No prior work experience</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>Undergraduate at the University of Texas at Bachelors in computer science. Planning to graduate in spring of 2026.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: cchaiban21@gmail.com</p>
+            <P>Phone Number: (832)683-6711</P>
+            <p>LinkedIn: https://www.linkedin.com/in/christopher-chaiban/</p>
+        </section>
     </main>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
