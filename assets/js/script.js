@@ -9,8 +9,10 @@ toggleButton.addEventListener("click", () => {
 //Enlarge Cert Image
 function openCertFull() {
     document.getElementById('cert-modal').style.display = 'flex';
+    document.getElementById('main-header').classList.add('hidden');
 }
 
 function closeCertFull() {
-    document.getElementById('cert-modal').style.dispaly = 'none';
+    document.getElementById('cert-modal').style.display = 'none';
+    document.getElementById('main-header').classList.remove('hidden');
 }
