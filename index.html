@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <nav>
             <h1>Christopher Chaiban</h1>
-            <u1>
+            <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#volunteering">Voluntering</a></li>
+                <li><a href="#volunteering">Volunteering</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </u1>
+            </ul>
             <button id="theme-toggle">🌓</button>
         </nav>
     </header>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="assets\videos\underocean.mp4" type="video/mp4">
+    </video>
 
     <main>
         <section id="about">
@@ -38,14 +43,14 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <u1>
+            <ul>
                 <li>Java</li>
                 <li>C++</li>
                 <li>Python</li>
                 <li>Routing and Switching Protocols</li>
                 <li>Network Design Methodologies</li>
                 <li>Network Security</li>
-            </u1>
+            </ul>
         </section>
 
         <section id="projects">
@@ -72,7 +77,10 @@
 
             <div class="cert-list">
                 <div class="cert-item">
-                    <span> Cisco Certified Network Associate, Cisco Systems</span>
+                    <span class="icon-left">
+                        <img src="assets\images\ciscologo.jfif" alt="Cisco" /> 
+                        Cisco Certified Network Associate, Cisco Systems
+                    </span>
                     <a href="https://cp.certmetrics.com/cisco/en/public/verify/credential/4RLJ50R3SL4EQLKN" target="blank" class="cert-button">Verify</a>
                 </div>
             </div>
@@ -81,11 +89,10 @@
                 <img src="assets\images\Cisco Certified Network Associate Certificate.png" alt="Certification" class="cert-thumbnail" onclick="openCertFull()" />
             </div>
             
-            <!-- Fullscreen Modal
+            <!--Fullscreen Modal-->
             <div id="cert-modal" class="cert-modal" onclick="closeCertFull()">
                 <img src="assets\images\Cisco Certified Network Associate Certificate.png" alt="Certification Full" class="cert-full" />
             </div>
-        -->
         </section>
 
         <section id="experience">
@@ -95,14 +102,31 @@
 
         <section id="education">
             <h2>Education</h2>
-            <p>Undergraduate at the University of Texas at Bachelors in computer science. Planning to graduate in spring of 2026.</p>
+            <p class="icon-left">
+                <img src="assets\images\utdlogo.jfif" alt="UTD" />
+                Undergraduate at the University of Texas at Bachelors in computer science. Planning to graduate in spring of 2026.
+            </p>
         </section>
+        <section id="volunteering">
+            <h2>Volunteering</h2>
+                <h3 class="icon-left">
+                    <img src="assets\images\kcmlogo.png" alt="KCM" />
+                    Katy Christian Ministries Resale Store
+                </h3>
+                <ul>
+                    <li>Assisted employees and customers in a timely manner</li>
+                    <li>Helped organized assortment of items such as books and clothing</li>
+                    <li>Clean the store to keep it presentable</li>
+                    <li>Thrift through donated items to ensure quality</li>
+                </ul>
+            </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: cchaiban21@gmail.com</p>
             <P>Phone Number: (832)683-6711</P>
-            <p>LinkedIn: https://www.linkedin.com/in/christopher-chaiban/</p>
+            <!--make link clickable-->
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/christopher-chaiban/" target="_blank">linkedin.com/in/christopher-chaiban</a></p>
         </section>
     </main>
 

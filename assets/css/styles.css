@@ -12,10 +12,15 @@
     --section-bg: #1e1e1e;
 }
 
+.hidden {
+    display: none;
+}
+
 body {
+
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Segoe Ui, Tahom, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -28,11 +33,12 @@ html {
 
 header {
     background-color: var(--section-bg);
-    padding: 1rem 2rem;
+    padding: 0.25rem 2.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 nav {
@@ -42,11 +48,13 @@ nav {
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
+    gap: 1rem;
 }
 
 nav h1 {
     font-size: 1.5rem;
     margin: 0;
+    margin-right: auto;
 }
 
 nav ul {
@@ -55,6 +63,7 @@ nav ul {
     gap: 1rem;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -72,10 +81,11 @@ nav ul li a:hover {
     background-color: transparent;
     border: 1px solid var(--text-color);
     border-radius: 5px;
-    padding: 0.5rem 1 rem;
+    padding: 0.5rem 1rem;
     color: var(--text-color);
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-left: 1rem;
 }
 
 #theme-toggle:hover {
@@ -84,10 +94,23 @@ nav ul li a:hover {
     border-color: var(--accent-color);
 }
 
+/* background video*/
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
 main {
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    backdrop-filter: blur(5x);
     max-width: 900px;
     margin: 2rem auto;
-    padding: 0 1 rem;
+    padding: 2rem;
 }
 
 section {
@@ -99,6 +122,11 @@ section {
 h2 {
     color: var(--accent-color);
     margin-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--accent-color);
+    margin-top: 0;
 }
 
 ul {
@@ -245,6 +273,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .cert-modal img.cert-full {
@@ -252,4 +281,20 @@ ul {
     max-height: 90%;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Icon next to header */
+.icon-left {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    gap: 0.3rem;
+}
+
+.icon-left img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
