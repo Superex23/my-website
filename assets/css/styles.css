@@ -31,14 +31,58 @@ html {
     scroll-padding-top: 225px;
 }
 
+/*Collapsible*/
+.collapsible {
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.25rem;
+    width: 100%;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    text-align: left;
+    outline: none;
+}
+.nav-collapsible {
+    width: 100%;
+}
+
+.active, .collapsible:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.content {
+    padding: 0 18px;
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    background-color: var(--section-bg);
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+    content: '\02795'; /* + */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: auto;
+}
+
+.active:after {
+    content: "\2796"; /* - */
+}
+
 header {
     background-color: var(--section-bg);
-    padding: 0.25rem 2.5rem;
+    padding: .5rem 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 10;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 nav {
@@ -64,6 +108,8 @@ nav ul {
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
+    overflow: hidden;
+    display: none;
 }
 
 nav ul li a {
@@ -80,12 +126,15 @@ nav ul li a:hover {
 #theme-toggle {
     background-color: transparent;
     border: 1px solid var(--text-color);
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    padding: 0.5rem;
     color: var(--text-color);
     cursor: pointer;
     transition: background 0.3s ease;
     margin-left: 1rem;
+    position: absolute;
+    top: .5rem;
+    right: .75rem;
 }
 
 #theme-toggle:hover {
@@ -157,7 +206,7 @@ ul {
     margin: 0.5rem 0;
 }
 
-/* Responsive tweaks*/
+/* Mobile Tweaks */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -177,6 +226,14 @@ ul {
 
     main {
         padding: 0 1rem;
+    }
+    .collapsible {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .content {
+        padding: 0 12px;;
     }
 }
 
